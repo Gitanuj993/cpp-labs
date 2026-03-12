@@ -53,5 +53,5 @@ int main()
 	
 	// using a function via object or simply accessing a function via object 
 	object1.putData() ;
-	
+	return 0 ;
 }
