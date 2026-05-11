@@ -1,0 +1,20 @@
+# name of the workflow
+name : cpp-labs
+# when
+on :
+  push : # any code is pushed 
+    branches : [ "main"] # on branch "main"
+
+jobs : # what to do 
+  build : # custom name of the job
+    runs-on : ubuntu-latest # create a virtual machine
+
+    steps :   # what to do next
+      - name : Checkout code # name of the job
+        uses : actions/checkout@v4   # from github ations take commits
+
+      - name : Run simple command # job task name
+        run : echo "Hello from github Actions Done ! " # this wil be executed on the  virtual machine 
+# after the workflow ends , virtual created machine will be destrooyed
+
+# this is a comment
